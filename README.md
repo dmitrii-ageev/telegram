@@ -1,5 +1,5 @@
 # telegram
-Docker container to run Telegram - text, voice and video communication software.
+Docker container to run Telegram - a messaging app with a focus on security and speed.
 
 # Usage
 
