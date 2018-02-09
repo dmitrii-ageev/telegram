@@ -1,5 +1,6 @@
-# telegram
-Docker container to run Telegram - a messaging app with a focus on security and speed.
+# pycharm
+
+Docker container to run [PyCharm](https://www.jetbrains.com/pycharm) - Python IDE for Professional Developers
 
 # Usage
 
@@ -9,15 +10,15 @@ When the image is launched the following directories are mounted as volumes
 
     Container		Host
 --------------------------------------------
-    ${HOME}/.telegram	~/.telegram
-    ${HOME}/.config	~/.telegram/.config
-    ${HOME}/.local	~/.telegram/.local
-    ${HOME}/.pki	~/.telegram/.pki
+    ${HOME}/.pycharm	~/.pycharm
+    ${HOME}/.config	~/.pycharm/.config
+    ${HOME}/.local	~/.pycharm/.local
+    ${HOME}/.pki	~/.pycharm/.pki
     ${HOME}/Downloads	~/Downloads
 
 This makes sure that your profile details are stored on the host and files received are available on your host in the appropriate download directory.
 
-To launch Telegram in a container use the wrapper script. For example, after installation telegram command will launch Telegram inside a Docker container regardless of whether it is installed on the host or not.
+To launch Pycharm in a container use the wrapper script. For example, after installation pycharm command will launch Pycharm inside a Docker container regardless of whether it is installed on the host or not.
 
 
 # Installation
@@ -25,20 +26,21 @@ To launch Telegram in a container use the wrapper script. For example, after ins
 With the image locally available, install the wrapper scripts using:
 
 ```
-docker run -it --rm --volume ~/bin/:/target dmitriiageev/telegram install
+docker run -it --rm --volume ~/bin/:/target dmitriiageev/pycharm install
 ```
 
-This will install a wrapper script to launch telegram.
+This will install a wrapper script to launch pycharm.
 
 
 # Uninstallation
 
 ```
-docker run -it --rm --volume ~/bin:/target dmitriiageev/telegram uninstall
+docker run -it --rm --volume ~/bin:/target dmitriiageev/pycharm uninstall
 ```
 
 # Note
+
 This docker image supports audio playback with PULSEAUDIO through a runtime dir mount.
 
-GitHub Page: https://github.com/dmitrii-ageev/telegram
-Docker Hub Page: https://hub.docker.com/r/dmitriiageev/telegram
+GitHub Page: https://github.com/dmitrii-ageev/pycharm
+Docker Hub Page: https://hub.docker.com/r/dmitriiageev/pycharm
